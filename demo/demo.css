@@ -1,0 +1,52 @@
+body { color: #202936; }
+.demo-sidebar { background: #872c38; }
+.demo-sidebar .sidebar-nav { background: transparent; }
+.demo-sidebar a { color: white; }
+.demo-sidebar nav a {
+  display: block;
+  padding: .75rem 1.5rem;
+  text-decoration: none;
+}
+.demo-sidebar nav a:hover,
+.demo-sidebar nav a[aria-current="page"] { background: #64212a; }
+.navbar { gap: .75rem; padding: 1rem 1.5rem; }
+.screen-heading, .actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+.screen-heading { margin-bottom: 1rem; }
+.screen-heading h1 { margin: 0; }
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.metrics .card { margin: 0; padding: 1.25rem; }
+.metrics strong { display: block; font-size: 1.5rem; }
+.feedback:empty { margin: 0; }
+.feedback:not(:empty) { background: #e4ebf5; padding: .75rem 1rem; }
+.table-responsive { white-space: nowrap; }
+.table td, .table th { vertical-align: middle; }
+.table .actions { justify-content: flex-end; flex-wrap: nowrap; }
+dialog {
+  width: min(30rem, calc(100% - 2rem));
+  max-height: calc(100% - 2rem);
+  padding: 1.5rem;
+  border: 0;
+  border-radius: .5rem;
+}
+dialog::backdrop { background: #17213099; }
+dialog .actions { justify-content: flex-end; }
+#fields label { display: block; margin-bottom: .75rem; }
+#fields label span { display: block; margin-bottom: .25rem; }
+@media (max-width: 767.98px) {
+  .wrapper { flex-direction: column; }
+  .demo-sidebar { width: 100%; min-width: 0; max-width: none; }
+  .demo-sidebar nav { display: flex; flex-wrap: wrap; padding: 0 .5rem .5rem; }
+  .demo-sidebar nav a { padding: .5rem .75rem; }
+  .content { padding: 1rem; }
+}
